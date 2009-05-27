@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use ExtUtils::Manifest qw( maniread );
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 use Exporter;
 
@@ -13,7 +13,7 @@ our @EXPORT = qw/all_uses_ok/;
 
 use Test::More;
 
-my $RULE;
+my $RULE = qr{^lib/(.+)\.pm$};
 
 sub import {
   shift->export_to_level(1);
@@ -22,7 +22,7 @@ sub import {
   my @dirs = ('lib', @_);
   my %seen;
   @dirs  = grep { !$seen{$_}++ } map  { s|/+$||; $_ } @dirs;
-  $RULE = '^(?:'.(join '|', @dirs).')/(.*)\.pm\s*$';
+  $RULE = '^(?:'.(join '|', @dirs).')/(.+)\.pm\s*$';
   unshift @INC, @dirs;
 }
 

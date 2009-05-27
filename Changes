@@ -2,6 +2,7 @@ Revision history for Perl extension Test::UseAllModules.
 
 0.12 2009/05/27
   - silenced a warnings on require (reported by Kevin Ryde #46389)
+  - now you can do extra tests like Test::NoWarnings with all_uses_ok
 
 0.11 2009/05/08
   - Modules under arbitrary directories can be tested now.

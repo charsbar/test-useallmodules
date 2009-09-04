@@ -8,7 +8,8 @@ WriteMakefile(
     PREREQ_PM         => {
         'Exporter'           => 0,
         'ExtUtils::Manifest' => 0,
-        'Test::More'         => 0,
+        'Test::More'         => '0.60',
+        'Test::Builder'      => '0.30', # for builder->{Have_Plan}
     },
     ($] >= 5.005 ?
       (ABSTRACT_FROM  => 'lib/Test/UseAllModules.pm',

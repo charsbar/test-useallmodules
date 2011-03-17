@@ -1,5 +1,7 @@
 use strict;
 use warnings;
+use FindBin;
+use lib glob("$FindBin::Bin/extlib/*/lib");
 use Test::UseAllModules;
 use Test::More tests => 2;
 

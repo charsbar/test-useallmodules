@@ -48,7 +48,13 @@ READ:
   return @modules;
 }
 
-sub _planned { Test::More->builder->{Have_Plan}; }
+sub _planned {
+  if ($Test::More::VERSION >= 2) {
+    Test::More->builder->_plan_handled;
+  } else {
+    Test::More->builder->{Have_Plan};
+  }
+}
 
 sub all_uses_ok {
   unless (-f 'MANIFEST') {

@@ -10,6 +10,7 @@ t/04_under.t
 t/04_under_files.t
 t/05_except.t
 t/06_require.t
+t/07_extra_tests.t
 t/99_pod.t
 t/99_podcoverage.t
 t/MANIFESTed/lib/TestUseAllModulesTest.pm

@@ -51,6 +51,8 @@ READ:
 sub _planned {
   if ($Test::More::VERSION >= 2) {
     Test::More->builder->_plan_handled;
+  } elsif ($Test::More::VERSION >= 1.005) {
+    Test::More->builder->history->plan;
   } else {
     Test::More->builder->{Have_Plan};
   }

@@ -1,5 +1,8 @@
 Revision history for Perl extension Test::UseAllModules.
 
+0.15 2014/07/13
+  - dropped (experimental) Test::More 1.5/2.0 support
+
 0.14 2012/08/03
   - Test::More version 1.5 support
 

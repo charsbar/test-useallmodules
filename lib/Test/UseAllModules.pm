@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use ExtUtils::Manifest qw( maniread );
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 
 use Exporter;
 

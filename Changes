@@ -1,5 +1,10 @@
 Revision history for Perl extension Test::UseAllModules.
 
+0.16 2014/11/13
+  - dropped cpanfile support, as it forced users of this module
+    to update too many modules, especially while testing backward
+    compatibility with older perls.
+
 0.15 2014/07/13
   - dropped (experimental) Test::More 1.5/2.0 support
 
